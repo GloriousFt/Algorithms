@@ -1,8 +1,3 @@
-# Algorithms
-Category of practical algorithms in Java
-
-Each branch of this repository represents an algorithm. Clone one branch as you needed.
-
 ## Backtracking(回溯算法)
 回溯算法其实就是利用深度优先遍历算法的一种"暴力破解"的算法。说它暴力,是因为它找出了每一个可能解,然后根据要求来进行筛选,适当的剪枝能对其性能提升很多。
 
@@ -14,5 +9,5 @@ Each branch of this repository represents an algorithm. Clone one branch as you 
 
 常见的问题:
 
-* 全排列问题
-* 集合中查找和为目标值的组合
+* 全排列问题 (Permutations)
+* 集合中查找和为目标值的组合 (Combination Sum)
