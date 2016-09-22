@@ -16,5 +16,6 @@ Each branch of this repository represents an algorithm. Clone one branch as you 
 
 常见的问题:
 
-* 全排列问题
-* 集合中查找和为目标值的组合
+* 全排列问题 (Permutations)
+* 集合中查找和为目标值的组合 (Combination Sum)
+* N皇后问题 (N-Queens)
