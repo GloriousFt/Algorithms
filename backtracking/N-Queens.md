@@ -9,16 +9,18 @@ Each solution contains a distinct board configuration of the n-queens' placement
 For example, there exists two distinct solutions to the 4-queens puzzle:
 
 [
- [".Q..",  // Solution 1
+ [".Q..",
   "...Q",
   "Q...",
   "..Q."],
 
- ["..Q.",  // Solution 2
+ ["..Q.",
   "Q...",
   "...Q",
   ".Q.."]
 ]
+
+[LeetCode N-Queens](https://leetcode.com/problems/n-queens/)
 
 ```java
 public List<List<String>> solveNQueens(int n) {
