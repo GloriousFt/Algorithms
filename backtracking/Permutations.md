@@ -13,7 +13,7 @@ public List<List<Integer>> permute(int[] nums) {
 }
 
 private void backtracking(List<List<Integer>> result, List<Integer> path, int[] nums) {
-    if (path.size() == nums.length) {
+    if ( path.size() == nums.length ) {
         result.add(new ArrayList<Integer>(path));
     } else {
         for (int i = 0;i < nums.length;i++) {

@@ -48,7 +48,7 @@ private void backtracking(List<List<Integer>> result, List<Integer> path, int in
 (i > 0 && candidates[i] == candidates[i - 1] && !isUsed[i - 1])
 ```
 
-这个条件是为了解决一种情况,如:[2,2,2],target = 4。
+这个条件是为了解决一种特殊情况,如:[2,2,2],target = 4。
 
 1. 从第一个元素"2"开始计算,前两个"2"正常入栈,在判断第三个的时候,因为target == 0,所以result保存结果"[2,2]"(第一个"2"是原集合中第一个"2",第二个"2"是原集合中第二个"2")。
 2. 第二个"2"出栈,第三个"2"入栈,此时如果不做这个条件判断则会再次把"[2,2]"(第一个"2"是原集合中第一个"2",第二个"2"是原集合中第三个"2")保存到result中。

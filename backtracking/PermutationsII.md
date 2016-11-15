@@ -14,7 +14,7 @@ public List<List<Integer>> permuteUnique(int[] nums) {
 }
 
 private void backtracking(List<List<Integer>> result, List<Integer> path, int[] nums, boolean[] isUsed) {
-    if (path.size() == nums.length) {
+    if ( path.size() == nums.length ) {
         result.add(new ArrayList<Integer>(path));
     } else {
         for (int i = 0;i < nums.length;i++) {

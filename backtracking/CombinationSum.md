@@ -19,16 +19,16 @@ public List<List<Integer>> combinationSum(int[] candidates, int target) {
     return result;
 }
 private void backtracking(List<List<Integer>> result, List<Integer> path, int[] candidates, int index, int target) {
-    if (target == 0) { //找到解,保存结果
+    if (target == 0) {
         result.add(new ArrayList<Integer>(path));
         return;
-    } else if (target < 0) { //不存在解,不需要继续查找
+    } else if (target < 0) {
         return;
     } else {
         for (int i = index;i < candidates.length;i++) {
-            path.add(candidates[i]); //入栈
+            path.add(candidates[i]);
             backtracking(result, path, candidates, i, target - candidates[i]);
-            path.remove(path.size() - 1); //出栈
+            path.remove(path.size() - 1);
         }
     }
 }
