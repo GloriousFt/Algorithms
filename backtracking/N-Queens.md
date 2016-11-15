@@ -8,6 +8,7 @@ Each solution contains a distinct board configuration of the n-queens' placement
 
 For example, there exists two distinct solutions to the 4-queens puzzle:
 
+```java
 [
  [".Q..",
   "...Q",
@@ -19,6 +20,7 @@ For example, there exists two distinct solutions to the 4-queens puzzle:
   "...Q",
   ".Q.."]
 ]
+```
 
 [LeetCode N-Queens](https://leetcode.com/problems/n-queens/)
 
