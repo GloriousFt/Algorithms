@@ -13,3 +13,4 @@
 * 集合中查找和为目标值的组合 (Combination Sum)
 * N皇后问题 (N-Queens)
 * 矩阵word搜索 (Word Search)
+* 集合值组合问题 (Combinations)
