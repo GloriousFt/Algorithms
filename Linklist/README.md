@@ -8,6 +8,8 @@
 
 ### Remove Duplicates from Link List
 
+[Leetcode Remove Duplicates from Link List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+
 Given a sorted linked list, delete all duplicates such that each element appear only once.
 
 For example,
@@ -53,6 +55,8 @@ public class Solution {
 ```
 
 ### Remove Duplicates from Link List 2
+
+[Leetcode Remove Duplicates from Link List 2](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
 
 Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
 
