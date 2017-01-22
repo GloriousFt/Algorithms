@@ -89,3 +89,45 @@ public ListNode deleteDuplicates(ListNode head) {
     return result.next;
 }
 ```
+
+* 链表分割 (Partition List)
+
+### Partition List
+
+[Leetcode Partition List](https://leetcode.com/problems/partition-list/)
+
+Given a linked list and a value `x`, partition it such that all nodes less than `x` come before nodes greater than or equal to `x`.
+
+You should preserve the original relative order of the nodes in each of the two partitions.
+
+For example,
+Given `1->4->3->2->5->2` and `x = 3`,
+return `1->2->2->4->3->5`.
+
+思路:
+
+链表分割的要求有很多种,这里是根据给定值来进行分割。
+用两个指针分别记录小于`x`的链表和大于等于`x`的链表。最后再把两个链表合并成一个。
+需要注意的是考虑到循环链表的情况,比如`head`的链表是`[2,1]`,`x = 2`。那么在两个链表合并后将会出现循环链表,因此直接将第二个链表的`next`置`null`就可以了。
+
+```java
+public ListNode partition(ListNode head, int x) {
+    ListNode lessList = new ListNode(0);
+    ListNode greaterList = new ListNode(0);
+    ListNode p = head, pLess = lessList, pGreater = greaterList;
+    while (p != null) {
+        if (p.val < x) {
+            pLess.next = p;
+            pLess = pLess.next;
+        } else {
+            pGreater.next = p;
+            pGreater = pGreater.next;
+        }
+        p = p.next;
+    }
+    //avoid the cycle in link-list
+    pGreater.next = null;
+    pLess.next = greaterList.next;
+    return lessList.next;
+}
+```
