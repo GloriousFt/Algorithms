@@ -27,6 +27,6 @@ public class Solution {
             then = start.next;
         }
         
-        return preHead;
+        return preHead.next;
     }
 }
