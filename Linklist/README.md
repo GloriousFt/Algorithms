@@ -131,3 +131,55 @@ public ListNode partition(ListNode head, int x) {
     return lessList.next;
 }
 ```
+
+* 链表转置 (Reverse Linked)
+
+### Reverse Linked List II
+
+[Leetcode Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
+
+Reverse a linked list from position m to n. Do it in-place and in one-pass.
+
+For example:
+Given `1->2->3->4->5->NULL`, `m = 2` and `n = 4`,
+
+return `1->4->3->2->5->NULL`.
+
+**Note:
+Given m, n satisfy the following condition:
+1 ≤ m ≤ n ≤ length of list.
+
+思路:
+
+转置可以是全局转置,或者是局部转置,局部转置的方法是通用的。
+
+因为要一次遍历就能实现,所以要用三个指针分别记录遍历的位置,一个指向当前位置start,一个指向当前位置的下一个位置then,一个指向链表的头pre,每次把当前位置的节点放到头节点的位置,然后重置指针。
+
+比如 `1 - 2 - 3 - 4 - 5 - NULL, m = 2, n = 4`, `pre -> 1, start -> 2, then -> 3`
+first reversing : dummy->1 - 3 - 2 - 4 - 5; pre = 1, start = 2, then = 4
+second reversing: dummy->1 - 4 - 3 - 2 - 5; pre = 1, start = 2, then = 5 (finish)
+
+```java
+public ListNode reverseBetween(ListNode head, int m, int n) {
+    if (head == null) {
+        return null;
+    }
+    ListNode preHead = new ListNode(0);
+    preHead.next = head;
+    ListNode pre = preHead;
+    for(int i = 0; i < m - 1; i++) {
+        pre = pre.next;
+    }
+    ListNode start = pre.next;
+    ListNode then = start.next;
+
+    for (int i = 0; i < n - m; i++) {
+        start.next = then.next;
+        then.next = pre.next;
+        pre.next = then;
+        then = start.next;
+    }
+
+    return preHead;
+}
+```

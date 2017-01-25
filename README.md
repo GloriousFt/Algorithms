@@ -6,3 +6,4 @@
 
 * 链表去重 (Remove Duplicates)
 * 链表分割 (Partition List)
+* 链表转置 (Reverse Linked)
