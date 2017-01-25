@@ -194,6 +194,6 @@ public ListNode reverseBetween(ListNode head, int m, int n) {
         then = start.next;
     }
 
-    return preHead;
+    return preHead.next;
 }
 ```
