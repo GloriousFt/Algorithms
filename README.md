@@ -1,4 +1,14 @@
-# Algorithms
-Category of practical algorithms in Java
+## Binary Tree(二叉树)
 
-Each branch of this repository represents an algorithm. Clone one branch as you needed.
+二叉树的遍历是解决一切问题的关键,递归方法与利用栈和队列可以完成二叉树的遍历。
+
+层次遍历(广度优先)可以利用队列来完成。
+前中后序可以利用栈来完成。
+
+关键: 队列和栈
+
+常见的问题:
+
+* 二叉树遍历,前序,中序,层次 (Traversal 94)
+* 二叉搜索树
+*
