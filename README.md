@@ -22,7 +22,7 @@ Each branch of this repository represents an algorithm. Clone one branch as you 
 * 矩阵word搜索 (Word Search)
 * 集合值组合问题 (Combinations)
 
-##Binary Search(二分查找)
+## Binary Search(二分查找)
 
 Binary Search 是查找的算法中非常常用的一种,本身算法实现并不难,但是难在如何应用到各种实际问题中去,往往想到要用binary search是难点。
 
