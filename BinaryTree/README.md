@@ -7,6 +7,8 @@
 
 二叉树的构建序列只有:中序前序和中序后序,前序和后序的构建二叉树不唯一。
 
+二叉搜索树是一种特殊的二叉树,它的任意节点的左子树节点都小于该节点的value,右子树节点都大于该节点的value。
+
 关键: 队列和栈
 
 常见的问题:
@@ -168,6 +170,28 @@ private TreeNode helper(int postStart, int inStart, int inEnd, int[] inorder, in
     TreeNode node = new TreeNode(postorder[postStart]);
     node.left = helper(postStart - inEnd + index - 1, inStart, index - 1, inorder, postorder);
     node.right = helper(postStart - 1, index + 1, inEnd, inorder, postorder);
+    return node;
+}
+```
+
+### 有序数组构建二叉搜索树
+
+有序数组构建二叉搜索树其实就是用二分法从根节点开始构建二叉搜索树。
+
+[Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/#/description)
+
+```java
+public TreeNode sortedArrayToBST(int[] nums) {
+    return helper(0, nums.length - 1, nums);
+}
+private TreeNode helper (int start, int end, int[] nums) {
+    if (start > end) {
+        return null;
+    }
+    int mid = start + (end - start) / 2;
+    TreeNode node = new TreeNode(nums[mid]);
+    node.left = helper(start, mid - 1, nums);
+    node.right = helper(mid + 1, end, nums);
     return node;
 }
 ```
