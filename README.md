@@ -21,6 +21,7 @@ Each branch of this repository represents an algorithm. Clone one branch as you 
 * N皇后问题 (N-Queens)
 * 矩阵word搜索 (Word Search)
 * 集合值组合问题 (Combinations)
+* 字符串查找回文子字符串 (Palindrome Partition)
 
 ## Binary Search(二分查找)
 
